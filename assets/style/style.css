@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* root elements */
+:root{
+    --primary-font:'Montserrat', sans-serif;
+    --text-font:'Roboto', sans-serif;
+    --primary-color:hsl(135, 64%, 49%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 1054px;
+    margin: 1rem auto;
+    
+}
+
+
+/* body elements */
+
+.container_info{
+    text-align: center;
+    margin: 2.5rem auto;
+    /* width: 70%; */
+}
+
+.container_heading{
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 1.3rem 0;
+    
+}
+
+.container_para{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    opacity: .8px;
+    line-height: 1.5rem;
+}
+
+
+/* styling grid containers */
+.container_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+
+
+
+
+.grid_img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.grid{
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem 1rem 2rem 1rem;
+    border-radius: 20px;
+}
+
+.grid_info-intro{
+    margin-top: 1rem;
+}
+
+.grid:nth-child(2){
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.grid:nth-child(3){
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.grid_info-para p{
+    line-height: 1.6rem;
+    
+}
+
+.grid_info-intro small{
+    display: block;
+    margin: .9rem 0 0 0;
+    font-size: .9rem;
+    opacity: .8;
+}
+
+/* for small and medium device */
+
+@media screen and (max-width:850px){
+
+    .container{
+        width: 85%;
+    }
+    .container_grid{
+        grid-template-columns: 1fr;
+    }
+
+    .grid:nth-child(3){
+        background-color: var(--primary-color);
+        color: white;
+        grid-row-start:4 ;
+    }
+
+    .container_heading{
+        font-size: 2rem;
+    }
+
+    .container_para{
+        width: 90%;
+        font-size: .9rem;
+    }
+
+    .grid_img img{
+        width: 100px;
+        height: 100px;
+        
+    }
+
+    .grid{
+        display: flex;
+        gap: 2rem;
+        
+    }
+
+    .grid p{
+        font-size: .9rem;
+    }
+
+
+
+    
+
+}
+
+@media screen and (max-width:1060px){
+    .container{
+        width: 85%;
+    }
+
+}
+
+@media screen and (max-width:960px){
+    .grid_img img{
+        width: 100px;
+        height: 100px;
+        
+    }
+
+    .grid_info-para p{
+        line-height: 1.4rem;
+        font-size: .9rem;
+    }
+
+    .grid_info h3{
+        font-size: 1rem;
+    }
+
+    .grid{
+        align-items: center;
+    }
+      
+
+}
